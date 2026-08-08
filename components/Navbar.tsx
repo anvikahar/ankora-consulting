@@ -1,11 +1,7 @@
 "use client";
 import { AnimatePresence, motion, useScroll } from "framer-motion";
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
-import { BRAND, navItems } from "../lib/constants";
-export function Navbar() {
- const [open, setOpen] = useState(false); const { scrollY } = useScroll(); const [scrolled, setScrolled] = useState(false); scrollY.on("change", y => setScrolled(y > 30));
- const close = () => setOpen(false);
- return <header className={`nav-wrap ${scrolled ? "scrolled" : ""}`}><nav className="nav" aria-label="Main navigation"><a href="#home" className="brand" onClick={close}><b>{BRAND.name}</b><span>CONSULTING</span></a><div className="desktop-nav">{navItems.slice(0, -1).map(i => <a key={i.href} href={i.href}>{i.label}</a>)}</div><a className="nav-cta desktop-cta" href="#contact">Start a Project</a><button className="menu-button" onClick={() => setOpen(!open)} aria-label="Toggle navigation" aria-expanded={open}>{open ? <X /> : <Menu />}</button></nav>
- <AnimatePresence>{open && <motion.div className="mobile-menu" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }}><div>{navItems.map(i => <a key={i.href} href={i.href} onClick={close}>{i.label}</a>)}<a href="#contact" className="nav-cta" onClick={close}>Start a Project</a></div></motion.div>}</AnimatePresence></header>;
-}
+import { Menu, MessageCircle, Send, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { siteConfig } from "@/lib/siteConfig";
+const links=["Home","Services","About","Why Us","Contact"];
+export function Navbar(){const [open,setOpen]=useState(false);const [scrolled,setScrolled]=useState(false);const {scrollY}=useScroll();useEffect(()=>scrollY.on("change",v=>setScrolled(v>16)),[scrollY]);return <header className={`ref-nav ${scrolled?"is-scrolled":""}`}><nav><a className="ref-brand" href="#home" aria-label={`${siteConfig.shortName} home`}><span>ND</span><div><b>{siteConfig.shortName}</b><small>{siteConfig.subtitle}</small></div></a><div className="ref-links">{links.map(link=><a key={link} href={`#${link.toLowerCase().replace(" ","-")}`}>{link}</a>)}</div><div className="ref-contact"><MessageCircle/><span>{siteConfig.phone}</span></div><a className="ref-hire" href="#contact">Hire Me <Send size={15}/></a><button className="ref-menu" onClick={()=>setOpen(!open)} aria-label="Toggle navigation">{open?<X/>:<Menu/>}</button></nav><AnimatePresence>{open&&<motion.div className="ref-mobile" initial={{height:0,opacity:0}} animate={{height:"auto",opacity:1}} exit={{height:0,opacity:0}}>{links.map(link=><a key={link} onClick={()=>setOpen(false)} href={`#${link.toLowerCase().replace(" ","-")}`}>{link}</a>)}<a href="#contact" onClick={()=>setOpen(false)}>Hire Me <Send size={15}/></a></motion.div>}</AnimatePresence></header>}
