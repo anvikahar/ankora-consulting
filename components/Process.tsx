@@ -1,0 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
+import { SectionHeading } from "./ui/SectionHeading";
+const steps=[["01","Discover","Understand your brand, audience, goals and the opportunity ahead."],["02","Design","Shape the product, experience and creative direction around what matters."],["03","Build","Bring the work to life through focused design, development and production."],["04","Grow","Launch, measure and improve your digital presence over time."]];
+export function Process(){return <section id="process" className="section process"><div className="container"><SectionHeading label="HOW WE WORK" title="A Simple Process. Digital Work That Delivers."/><div className="process-line"/><div className="process-grid">{steps.map(([n,t,d],i)=><motion.article className="process-step" key={n} initial={{opacity:0,y:25}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*.12}}><span className="process-number">{n}</span><div className="process-dot"/><h3>{t}</h3><p>{d}</p></motion.article>)}</div></div></section>}

@@ -1,0 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+import { Star } from "lucide-react";
+import { SectionHeading } from "./ui/SectionHeading";
+const testimonials=[["Ankora delivered a dependable software solution with clear communication from start to finish.","Sarah Mitchell","CEO, GrowthCo","SM"],["They made the whole app process clear, collaborative and genuinely exciting from idea to launch.","Michael Anderson","Founder, TechWorks","MA"],["Their AV expertise and practical delivery made a measurable difference to our business.","Emily Carter","COO, ScaleLabs","EC"]];
+export function Testimonials(){return <section className="section testimonials"><div className="container"><SectionHeading label="CLIENT PERSPECTIVES" title="What Our Clients Say"/><div className="testimonial-grid">{testimonials.map(([quote,name,role,initial],i)=><motion.figure key={name} initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*.1}}><div className="stars">{Array.from({length:5},(_,n)=><Star key={n} size={15} fill="currentColor"/>)}</div><blockquote>“{quote}”</blockquote><figcaption><span>{initial}</span><div><b>{name}</b><small>{role}</small></div></figcaption></motion.figure>)}</div></div></section>}
