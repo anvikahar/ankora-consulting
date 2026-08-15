@@ -3,6 +3,9 @@
 
 .nav-contact { display: flex; align-items: center; gap: 14px; color: #445a75; font-size: 11px; font-weight: 700; }
 .nav-contact a:hover { color: var(--blue); }
+.nav-contact .nav-email-icon { display: grid; place-items: center; width: 30px; height: 30px; border: 1px solid #9fc5e9; border-radius: 50%; color: #0874f9; background: #eff7ff; transition: .2s ease; }
+.nav-contact .nav-email-icon svg { width: 15px; height: 15px; stroke-width: 2.5; }
+.nav-contact .nav-email-icon:hover { border-color: var(--blue); background: var(--blue); color: #fff; transform: translateY(-2px); }
 
 @keyframes intro-in {
   from { opacity: 0; transform: translateY(20px); }

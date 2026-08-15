@@ -2,10 +2,12 @@ import { siteConfig } from "@/lib/siteConfig";
 import { ServicesSlider } from "@/components/ServicesSlider";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { BrandLogo } from "@/components/BrandLogo";
+import { Mail } from "lucide-react";
 
 const services = [
   ["⌘", "Software Development", "Web platforms, internal tools and reliable custom systems that move your business forward."],
   ["◫", "Website Design & Development", "Fast, clear and conversion-focused websites built for every screen and every customer."],
+  ["◈", "Website Handling & Maintenance", "Ongoing updates, content support, performance checks and reliable care for your website."],
   ["▣", "Mobile Applications", "Useful, polished mobile products for iOS and Android—from first idea to launch."],
   ["☁", "Cloud & Infrastructure", "Secure cloud foundations, APIs and scalable deployments that are easy to maintain."],
   ["✦", "UI/UX & Product Design", "Thoughtful product strategy and interface design shaped around real user needs."],
@@ -25,7 +27,7 @@ export default function Home() {
     <header className="main-nav"><div className="container nav-inner">
       <a className="brand" href="#home" aria-label={`${siteConfig.shortName} home`}><BrandLogo/></a>
       <nav className="nav-links" aria-label="Main navigation"><a href="#services">Services</a><a href="#about">About</a><a href="#process">Process</a><a href="#work">Work</a><a href="#contact">Contact</a></nav>
-      <div className="nav-contact"><a href={`mailto:${siteConfig.email}`}>✉ {siteConfig.email}</a><a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}>◉ {siteConfig.phone}</a></div>
+      <div className="nav-contact"><a className="nav-email-icon" href={`mailto:${siteConfig.email}`} aria-label={`Email ${siteConfig.email}`}><Mail aria-hidden="true"/></a><a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}>◉ {siteConfig.phone}</a></div>
     </div></header>
 
     <section id="home" className="hero"><div className="hero-dots"/><div className="container hero-grid"><div className="hero-workbench" aria-hidden="true"><div className="work-browser"><header><i/><i/><i/><span>new-project.wakeupglobal</span></header><main><b/><p/><p className="short"/><section><i/><i/><i/></section><footer><i/><i/></footer></main></div><div className="work-phone"><header/><small>WakeUp App</small><b>Everything<br/>in one place.</b><p/><p className="short"/><section><i/><i/><i/></section><footer><span/><span className="active"/><span/></footer></div><div className="work-code"><span>01&nbsp; &lt;main&gt;</span><span>02&nbsp;&nbsp;&nbsp; &lt;section className=<em>"hero"</em>&gt;</span><span>03&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h1&gt;<b>Build the future</b>&lt;/h1&gt;</span><span>04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button&gt;<em>Start here</em>&lt;/button&gt;</span><span>05&nbsp;&nbsp;&nbsp; &lt;/section&gt;</span><span>06&nbsp; &lt;/main&gt;<i/></span></div><div className="work-cursor">⌁</div></div><div className="hero-copy animate-intro">

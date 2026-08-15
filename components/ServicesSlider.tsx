@@ -1,14 +1,15 @@
 "use client";
 
-import { ArrowLeft, ArrowRight, ArrowUpRight, Cloud, Code2, Palette, Pause, Play, Rocket, Smartphone, Sparkles } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Cloud, Code2, Palette, Pause, Play, Rocket, Smartphone, Sparkles, Wrench } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 
 const slides = [
   { icon: Code2, number: "01", label: "ENGINEERING", title: "Custom Software", text: "Purpose-built platforms, portals and internal tools that simplify your work and scale with your business.", tags: ["Web apps", "Dashboards", "APIs"], color: "blue" },
   { icon: Palette, number: "02", label: "WEB DESIGN", title: "Websites That Perform", text: "Clear, responsive and conversion-focused websites that make a confident first impression on every screen.", tags: ["Web design", "E-commerce", "SEO ready"], color: "cyan" },
-  { icon: Smartphone, number: "03", label: "MOBILE", title: "Mobile Experiences", text: "Intuitive applications that put your service in your customers’ hands—designed for everyday use and lasting engagement.", tags: ["iOS & Android", "UX design", "App launch"], color: "violet" },
-  { icon: Rocket, number: "04", label: "MARKETING", title: "Digital Marketing", text: "Focused campaigns, social content and search strategy that help the right audience find and choose your brand.", tags: ["SEO", "Social media", "Campaigns"], color: "mint" },
-  { icon: Cloud, number: "05", label: "CLOUD", title: "Cloud & Growth", text: "Secure foundations, dependable deployment and smart improvements that keep your digital product moving forward.", tags: ["Cloud setup", "Automation", "Support"], color: "blue" },
+  { icon: Wrench, number: "03", label: "WEBSITE CARE", title: "Website Handling", text: "Reliable updates, content changes, performance reviews and ongoing care that keep your website working at its best.", tags: ["Updates", "Maintenance", "Support"], color: "violet" },
+  { icon: Smartphone, number: "04", label: "MOBILE", title: "Mobile Experiences", text: "Intuitive applications that put your service in your customers’ hands—designed for everyday use and lasting engagement.", tags: ["iOS & Android", "UX design", "App launch"], color: "violet" },
+  { icon: Rocket, number: "05", label: "MARKETING", title: "Digital Marketing", text: "Focused campaigns, social content and search strategy that help the right audience find and choose your brand.", tags: ["SEO", "Social media", "Campaigns"], color: "mint" },
+  { icon: Cloud, number: "06", label: "CLOUD", title: "Cloud & Growth", text: "Secure foundations, dependable deployment and smart improvements that keep your digital product moving forward.", tags: ["Cloud setup", "Automation", "Support"], color: "blue" },
 ];
 
 export function ServicesSlider({ hero = false }: { hero?: boolean }) {
