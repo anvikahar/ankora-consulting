@@ -1,0 +1,10 @@
+/* Small compatibility and mobile-navigation refinements. */
+.work-art { align-items: flex-end; }
+
+.nav-contact { display: flex; align-items: center; gap: 14px; color: #445a75; font-size: 11px; font-weight: 700; }
+.nav-contact a:hover { color: var(--blue); }
+
+@media (max-width: 600px) {
+  .nav-contact { font-size: 0; gap: 8px; }
+  .nav-contact a { display: grid; place-items: center; width: 29px; height: 29px; border: 1px solid var(--line); border-radius: 50%; font-size: 12px; }
+}
