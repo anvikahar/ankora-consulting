@@ -256,3 +256,7 @@
   .footer-grid .brand { width: max-content; max-width: 100%; }
   .footer-grid .brand-logo-copy small { overflow: hidden; text-overflow: ellipsis; }
 }
+
+.cta-copy .contact-note { display: inline-flex; align-items: center; gap: 7px; margin: -5px 0 20px; padding: 10px 13px; border: 1px solid #28dff56b; border-radius: 10px; color: #e4f7ff; background: linear-gradient(100deg, #16d9ee20, #1677ff24); box-shadow: 0 10px 28px #061d453d, inset 0 1px #ffffff1f; font-size: 12px; font-weight: 600; }
+.cta-copy .contact-note::before { display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: #17d9ee28; color: var(--cyan); content: "✦"; font-size: 12px; }
+.contact-note b { color: var(--cyan); font-weight: 800; }
