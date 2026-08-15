@@ -6,6 +6,8 @@
 .nav-contact .nav-email-icon { display: grid; place-items: center; width: 30px; height: 30px; border: 1px solid #9fc5e9; border-radius: 50%; color: #0874f9; background: #eff7ff; transition: .2s ease; }
 .nav-contact .nav-email-icon svg { width: 15px; height: 15px; stroke-width: 2.5; }
 .nav-contact .nav-email-icon:hover { border-color: var(--blue); background: var(--blue); color: #fff; transform: translateY(-2px); }
+.nav-phone-icon { display: inline-flex; align-items: center; gap: 5px; }
+.nav-phone-icon svg { width: 14px; height: 14px; color: #0874f9; stroke-width: 2.5; }
 
 @keyframes intro-in {
   from { opacity: 0; transform: translateY(20px); }
@@ -125,6 +127,14 @@
 @media (max-width: 600px) {
   .nav-contact { font-size: 0; gap: 8px; }
   .nav-contact a { display: grid; place-items: center; width: 29px; height: 29px; border: 1px solid var(--line); border-radius: 50%; font-size: 12px; }
+}
+
+@media (max-width: 900px) {
+  .nav-contact { gap: 8px; }
+  .nav-phone-icon { display: grid; place-items: center; width: 30px; height: 30px; border: 1px solid #cbd8e6; border-radius: 50%; background: #fff; }
+  .nav-phone-icon span { display: none; }
+  .nav-phone-icon:hover { border-color: var(--blue); background: var(--blue); color: #fff; transform: translateY(-2px); }
+  .nav-phone-icon:hover svg { color: #fff; }
 }
 
 @media (max-width: 800px) {
