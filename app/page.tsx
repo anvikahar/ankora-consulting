@@ -3,6 +3,7 @@ import { ServicesSlider } from "@/components/ServicesSlider";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { BrandLogo } from "@/components/BrandLogo";
 import { ContactForm } from "@/components/ContactForm";
+import { BackToTop } from "@/components/BackToTop";
 import { Mail, Phone } from "lucide-react";
 
 const services = [
@@ -23,7 +24,7 @@ const reasons = [
 ];
 
 export default function Home() {
-  return <main><ScrollReveal/>
+  return <main><ScrollReveal/><BackToTop/>
     <div className="topline"><div className="container"><span>DIGITAL TECHNOLOGY · CREATIVE SOLUTIONS · GLOBAL DELIVERY</span><span>Worldwide delivery · Local & international clients</span></div></div>
     <header className="main-nav"><div className="container nav-inner">
       <a className="brand" href="#home" aria-label={`${siteConfig.shortName} home`}><BrandLogo/></a>

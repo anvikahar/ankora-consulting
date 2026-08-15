@@ -137,6 +137,12 @@
   .nav-phone-icon:hover svg { color: #fff; }
 }
 
+.back-to-top { position: fixed; right: 22px; bottom: 22px; z-index: 20; display: grid; place-items: center; width: 43px; height: 43px; border: 1px solid #65ddeb91; border-radius: 13px; color: #fff; background: linear-gradient(135deg, #126fff, #11c9dc); box-shadow: 0 14px 30px #021a3f4d; cursor: pointer; opacity: 0; pointer-events: none; transform: translateY(14px) scale(.9); transition: opacity .25s ease, transform .25s ease, filter .2s ease; }
+.back-to-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0) scale(1); }
+.back-to-top:hover { filter: brightness(1.1); transform: translateY(-3px); }.back-to-top svg { width: 19px; stroke-width: 2.7; }
+.back-to-top:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+@media (max-width: 600px) { .back-to-top { right: 15px; bottom: 15px; width: 40px; height: 40px; border-radius: 11px; } }
+
 @media (max-width: 800px) {
   .slider-section { padding: 70px 0; }
   .slider-wrap { grid-template-columns: 1fr; gap: 30px; }
